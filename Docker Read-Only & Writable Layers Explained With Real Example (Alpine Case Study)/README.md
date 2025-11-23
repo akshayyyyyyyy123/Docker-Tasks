@@ -270,6 +270,19 @@ Build Cache     0         0         0B        0B
 
 ---
 
+## **STEP 05 — Check the size of each container**
+
+```bash
+docker ps -s
+
+CONTAINER ID   IMAGE           COMMAND     CREATED          STATUS          PORTS     NAMES     SIZE
+14345d37c898   alpine:latest   "/bin/sh"   47 minutes ago   Up 47 minutes             a3        4.1kB (virtual 9.2MB)
+79a312fabd13   alpine:latest   "/bin/sh"   47 minutes ago   Up 47 minutes             a2        4.1kB (virtual 9.2MB)
+27d1758be975   alpine:latest   "/bin/sh"   47 minutes ago   Up 47 minutes             a1        8.02MB (virtual 17.2MB)
+```
+#### The additional increase in the 8MB is due to the installation of the curl package inside the container a1.
+---
+
 # 🧠 The Golden Logic: What Happened?
 
 ### ❌ Image size did NOT increase  
