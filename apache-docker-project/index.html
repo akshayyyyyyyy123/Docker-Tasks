@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Task Tracker Dashboard</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <header class="app-header">
+        <h1>Task Tracker</h1>
+        <p class="subtitle">A simple frontend app to practice Dockerizing</p>
+      </header>
+
+      <main class="app-main">
+        <section class="card new-task-card">
+          <h2>Add New Task</h2>
+          <form id="task-form">
+            <div class="form-row">
+              <label for="title">Title</label>
+              <input
+                type="text"
+                id="title"
+                name="title"
+                placeholder="e.g. Learn Dockerfile basics"
+                required
+              />
+            </div>
+
+            <div class="form-row">
+              <label for="priority">Priority</label>
+              <select id="priority" name="priority">
+                <option value="low">Low</option>
+                <option value="medium" selected>Medium</option>
+                <option value="high">High</option>
+              </select>
+            </div>
+
+            <div class="form-row">
+              <label for="dueDate">Due date</label>
+              <input type="date" id="dueDate" name="dueDate" />
+            </div>
+
+            <button type="submit" class="btn primary">Add Task</button>
+          </form>
+        </section>
+
+        <section class="card tasks-card">
+          <header class="tasks-header">
+            <h2>Your Tasks</h2>
+            <div class="filters">
+              <button class="chip active" data-filter="all">All</button>
+              <button class="chip" data-filter="active">Active</button>
+              <button class="chip" data-filter="completed">Completed</button>
+            </div>
+          </header>
+
+          <ul id="task-list" class="task-list"></ul>
+
+          <p id="empty-state" class="empty-state">
+            No tasks yet. Add your first task above!
+          </p>
+        </section>
+      </main>
+
+      <footer class="app-footer">
+        <p>
+          Built for Docker practice –
+          <span class="mono">static HTML + CSS + JS</span>
+        </p>
+      </footer>
+    </div>
+
+    <script src="./app.js"></script>
+  </body>
+</html>
+
+
