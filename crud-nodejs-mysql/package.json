@@ -1,0 +1,14 @@
+{
+    "name": "crud-nodejs-mysql",
+    "version": "1.0.0",
+    "description": "Simple Node.js + MySQL CRUD app",
+    "main": "server.js",
+    "scripts": {
+      "start": "node server.js"
+    },
+    "dependencies": {
+      "express": "^4.19.2",
+      "mysql2": "^3.10.0"
+    }
+  }
+  
